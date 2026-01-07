@@ -1,6 +1,11 @@
+import { HeaderWrapper } from "./styled";
+
+
 const Header = () => {
     return <>
-        <h2>Header</h2>
+        <HeaderWrapper>
+            <h2>Header</h2>
+        </HeaderWrapper>
     </>
 }
 

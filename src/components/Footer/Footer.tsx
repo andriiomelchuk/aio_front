@@ -1,6 +1,11 @@
+import { FooterWrapper } from "./styled";
+
+
 const Footer = () => {
     return <>
-        <h2>Footer</h2>
+        <FooterWrapper>
+            Footer
+        </FooterWrapper>
     </>
 }
 
