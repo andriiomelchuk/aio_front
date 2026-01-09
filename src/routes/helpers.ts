@@ -4,6 +4,7 @@ export const pathsPublic: { [k: string]: string } = {
     productDetails: '/product/:idOrSlug',
     gitPopular: '/popular',
     gitBattle: '/battle',
+    battleResult: '/battle/:result',
     movie: 'movie',
 }
 

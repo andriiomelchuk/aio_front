@@ -86,4 +86,13 @@ export const PageWrapper = styled.div`
   min-height: calc(100vh - ${HEADER_HEIGHT}px - ${FOOTER_HEIGHT}px);
 `
 
+export const Wrapper = styled.div`
+height: auto;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 25px;
+`
+
 
