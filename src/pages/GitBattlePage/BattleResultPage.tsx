@@ -1,4 +1,4 @@
-import { makeBattle } from "../../API/apis";
+import { makeBattle } from "../../api/apis";
 import Player from "components/Player/Player";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";

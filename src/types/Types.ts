@@ -66,3 +66,12 @@ export type T_GithubRepo = {
 export type T_GithubSearchResponse<T> = {
     items: T[]
 }
+
+export type T_InitialPopularState = {
+    selectedLanguageIndex: number,
+    languages: string[]
+};
+
+
+
+
