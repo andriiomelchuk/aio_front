@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { PlayerInputProps } from "types/Types";
+import { T_PlayerInputProps } from "types/Types";
 import { PlayerButton, PlayerInputs, PlayerLabel } from "./styled";
 
 
 
 
-const PlayerInput = ({label, id, onSubmit}: PlayerInputProps) => {
+const PlayerInput = ({label, id, onSubmit}: T_PlayerInputProps) => {
 
     
     // console.log("asdasdasd " + id)

@@ -1,8 +1,8 @@
-import { makeBattle } from "components/API/apis";
+import { makeBattle } from "../../API/apis";
 import Player from "components/Player/Player";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { BattleResult } from "types/Types";
+import { T_BattleResult } from "types/Types";
 import { Content } from "./styled";
 import { PageWrapper, Wrapper } from "App.styled";
 
@@ -12,19 +12,24 @@ const BattleResultPage = () => {
 
     const location = useLocation();
 
-    const [winner, setWinner] = useState<BattleResult | null>(null);
-    const [loser, setLoser] = useState<BattleResult | null>(null);
+
+    const [winner, setWinner] = useState<T_BattleResult | null>(null);
+    const [loser, setLoser] = useState<T_BattleResult | null>(null);
+    // const [error, setError] = useState(null);
+    // const [loading, setLoading] = useState(true);
 
 
 
     useEffect(() => {
+
         const searchParams = new URLSearchParams(location.search);
         makeBattle([searchParams.get("playerOneName"), searchParams.get("playerTwoName")])
             .then(([winner, loser]) => {
                 setWinner(winner);
                 setLoser(loser);
             })
-
+            // .catch((error) => setError(error))
+            //  .finally(() => setLoading(false))
     }, [])
 
 

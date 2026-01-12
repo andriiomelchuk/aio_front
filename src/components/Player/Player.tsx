@@ -1,10 +1,10 @@
-import { PlayerResult } from "types/Types";
+import { T_PlayerResult } from "types/Types";
 import PlayerPreview from "./PlayerPreview";
 import { PlayerH1, PlayerH3, PlayerLi, PlayerUl } from "./styled";
 
 
 
-const Player = ({label, score, profile}: PlayerResult) => {
+const Player = ({label, score, profile}: T_PlayerResult) => {
      if(!profile) return null;
     return (
         <div>

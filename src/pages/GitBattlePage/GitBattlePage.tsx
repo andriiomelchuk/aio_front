@@ -4,14 +4,14 @@ import { useCallback, useState } from "react";
 import { PageWrapper, Wrapper } from "App.styled";
 import PlayerInput from "components/Player/PlayerInput";
 import PlayerPreview from "components/Player/PlayerPreview";
-import { PlayerData } from "types/Types";
+import { T_PlayerData } from "types/Types";
 import fightIcon from "img/fight.png"
 
 
 
 const GitBattlePage: React.FC = () => {
 
-    const [playerData, setPlayerData] = useState<PlayerData>({
+    const [playerData, setPlayerData] = useState<T_PlayerData>({
         playerOneName: '',
         playerTwoName: '',
         playerOneImage: null,

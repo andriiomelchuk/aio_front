@@ -1,43 +1,45 @@
-export type I_User = {
+
+
+export interface I_User {
     id: number,
     avatar_url: string,
     login: string,
     name: string
-}
+};
 
-export type PlayerInputProps = {
+export type T_PlayerInputProps = {
     label: string,
     id: string,
     onSubmit: (id: string, value: string) => void
-}
+};
 
 
-export type PlayerPreviewProps = {
+export type T_PlayerPreviewProps = {
     avatar: any,
     userName: any,
     children: any
-}
+};
 
-export type PlayerData = {
+export type T_PlayerData = {
     playerOneName: string,
     playerTwoName: string,
     playerOneImage: null,
     playerTwoImage: null
-}
+};
 
-export type BattleResult = {
+export type T_BattleResult = {
     score: number;
-    profile: Profile;
-}
+    profile: T_Profile;
+};
 
-export interface PlayerResult {
+export interface T_PlayerResult {
     label: string;
     score: number;
-    profile: Profile
-}
+    profile: T_Profile
+};
 
 
-export type Profile = {
+export type T_Profile = {
     login: string;
     avatar_url: string;
     name?: string;
@@ -47,4 +49,20 @@ export type Profile = {
     following: number;
     public_repos: number;
     blog?: string;
+};
+
+export type T_GithubRepo = {
+    id: number
+    name: string
+    full_name: string
+    html_url: string
+    stargazers_count: number
+    owner: {
+        login: string
+        avatar_url: string
+    }
+};
+
+export type T_GithubSearchResponse<T> = {
+    items: T[]
 }

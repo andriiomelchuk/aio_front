@@ -1,11 +1,11 @@
-import { PlayerPreviewProps } from "types/Types";
+import { T_PlayerPreviewProps } from "types/Types";
 import { PlayerContainer, PlayerMain, PlayerImg, PlayerName } from "./styled";
 
 
 
 
 
-const PlayerPreview = ({avatar, userName, children}: PlayerPreviewProps) => {
+const PlayerPreview = ({avatar, userName, children}: T_PlayerPreviewProps) => {
 
     return (
         <PlayerContainer>
