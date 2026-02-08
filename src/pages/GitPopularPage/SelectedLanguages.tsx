@@ -16,6 +16,13 @@ const SelectedLanguages = () => {
     const languages = useSelector((state: any) => state.rootReducer.popular.languages);
 
     const dispatch: Dispatch = useDispatch();
+    
+    window.addEventListener("keydown", (e: KeyboardEvent) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            alert("To add a language, please click the 'Add' button.");
+        }
+    });
 
     return (
         <>

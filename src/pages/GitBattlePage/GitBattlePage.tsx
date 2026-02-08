@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
-import { Button, Content, StyledLink,FightImg } from "./styled";
+import { Button, Content, StyledLink, FightImg } from "./styled";
 import { useCallback, useState } from "react";
-import { PageWrapper, Wrapper } from "App.styled";
+import { Wrapper } from "App.styled";
 import PlayerInput from "components/Player/PlayerInput";
 import PlayerPreview from "components/Player/PlayerPreview";
 import { T_PlayerData } from "types/Types";
@@ -41,7 +41,7 @@ const GitBattlePage: React.FC = () => {
             <h1>Github users battle</h1>
         </Helmet>
 
-        <PageWrapper>
+
 
             <Wrapper>
             
@@ -89,8 +89,6 @@ const GitBattlePage: React.FC = () => {
             }
 
             </Wrapper>
-        </PageWrapper>
-
     </>
 }
 

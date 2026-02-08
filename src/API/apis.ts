@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_KEY } from "consts";
 import { I_User, T_GithubRepo, T_GithubSearchResponse } from "types/Types";
 
 const handleError = (error: any) => console.error(error)
@@ -56,11 +57,30 @@ export const makeBattle = (players: any) => {
 
 export const fetchPopularRepos = async (language: string): Promise<T_GithubRepo[]> => {
     const encodedURI = window.encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`)
-    
+
     const response = await axios.get<T_GithubSearchResponse<T_GithubRepo>>(encodedURI)
     return response.data.items
 
 }
 
+export const fetchMovies = async (searchQuery: string, type: string) => {
+    const encodedURI = window.encodeURI(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchQuery}${type !== 'all' ? `&type=${type}` : ''}`)
+    const response = await axios.get(encodedURI)
+    return response.data
+
+    // i=tt3896198&
+}
 
 
+// export const searchMovies = async (searchQuery: string) => {
+
+//     const encodedURI = window.encodeURI(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${API_KEY}`)
+//     const response = await axios.get(encodedURI)
+//     console.log(response.data)
+//     return response.data
+// }
+
+
+//  http://www.omdbapi.com/?apikey=3870440a&y=2025
+
+// https://www.omdbapi.com/?i=tt3896198&apikey=3870440a&s=matrix&y=2000

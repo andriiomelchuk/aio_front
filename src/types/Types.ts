@@ -1,3 +1,4 @@
+import store from "store";
 
 
 export interface I_User {
@@ -72,6 +73,29 @@ export type T_InitialPopularState = {
     languages: string[]
 };
 
+
+export type T_Movie = {
+    Title: string,
+    Year: string,
+    imdbID: string,
+    Type: string,
+    Poster: string
+}
+
+
+
+
+export type T_Movies = T_Movie[] | []
+
+export type T_InitialMovieState = {
+    name: string,
+    type: string
+    movies: T_Movies,
+    movie: T_Movie,
+}
+
+// export type RootState = ReturnType<typeof store.getState>
+// export type AppDispatch = typeof store.dispatch
 
 
 
